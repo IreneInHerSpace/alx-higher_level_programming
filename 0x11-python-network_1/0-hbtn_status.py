@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-import urllib.request
+"""fetches https://alx-intranet.hbtn.io/status"""
 
-url = "https://alx-intranet.hbtn.io/status"
-    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
+
+if __name__ == "__main__":
+    import urllib.request
+
+    with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as response:
         html = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(html)))
