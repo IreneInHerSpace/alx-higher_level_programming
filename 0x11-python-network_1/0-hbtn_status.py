@@ -5,14 +5,9 @@ import urllib.request
 url = 'https://alx-intranet.hbtn.io/status'
 
 with urllib.request.urlopen(url) as response:
-        html = response.read()
-<<<<<<< HEAD
+       html = response.read()
 
 
-=======
-        
-        
->>>>>>> d00a07ebf80c8e1384480bef7428bc72e88420a6
         print('Body response:')
         print('\t- type: {}'.format(type(html)))
         print('\t- content: {}'.format(html))
