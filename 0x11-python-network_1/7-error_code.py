@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Fetches the body of a response, handling errors and printing status code >= 400"""
+"""Fetches the body of a response, handling
+errors and printing status code >= 400"""
 import requests
 from sys import argv
 
