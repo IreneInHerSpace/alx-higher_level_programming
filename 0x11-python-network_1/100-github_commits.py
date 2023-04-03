@@ -17,5 +17,6 @@ def apidata():
     except IndexError:
         pass
 
+
 if __name__ == "__main__":
     apidata()
