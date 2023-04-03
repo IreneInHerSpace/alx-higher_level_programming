@@ -1,19 +1,12 @@
 #!/usr/bin/python3
-"""Check status"""
+"""Fetches the body of a response, handling errors and printing status code >= 400"""
 import requests
-import sys
+from sys import argv
 
-
-def errorcode():
-    """status"""
-    result = requests.get(sys.argv[1])
-    try:
-        if result.status_code > 400:
-            print("Error code: {}".format(result.status_code))
-        else:
-            print(result.content.decode("utf-8"))
-    except KeyError:
-        pass
-
-if __name__ == "__main__":
-    errorcode()
+if __name__ == '__main__':
+    url = argv[1]
+    response = requests.get(url)
+    if response.status_code >= 400:
+        print("Error code: {}".format(response.status_code))
+    else:
+        print(response.text)
