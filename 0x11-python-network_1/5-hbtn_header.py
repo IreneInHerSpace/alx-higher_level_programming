@@ -1,14 +1,8 @@
 #!/usr/bin/python3
-"""Check status"""
 import requests
 import sys
 
-
-def header():
-    """status"""
-    result = requests.get(sys.argv[1])
-
-    print(result.headers.get("X-Request-Id", None))
-
 if __name__ == "__main__":
-    header()
+    url = sys.argv[1]
+    response = requests.get(url)
+    print(response.headers.get('X-Request-Id'))
