@@ -1,1 +1,1 @@
-O(log(n)),O(n),O(nlog(n)),O(n2)
+The time complexity of this algorithm is O(log n), which is the lowest complexity we can achieve to find a peak in an unsorted list.
